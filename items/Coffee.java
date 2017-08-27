@@ -1,8 +1,8 @@
 package items;
-//import behaviours;
+import behaviours.*;
 
 // public class FreshFood extends Food implements Sellable, Edible{
-public class Coffee extends Drink{
+public class Coffee extends Drink implements Sellable{
 
   // Properties
   private String beanType;

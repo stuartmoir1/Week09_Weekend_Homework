@@ -1,8 +1,8 @@
 package items;
-//import behaviours;
+import behaviours.*;
 
 // public class FreshFood extends Food implements Sellable, Edible{
-public class FreshFood extends Food{
+public class FreshFood extends Food implements Sellable{
 
   // Properties
   private int daysUseAfterOpening;
