@@ -7,9 +7,8 @@ public abstract class Drink extends Item{
   private boolean glutenFree;
 
   // Constructor
-  public Drink(String name, String type, String subtype, Float price,
-      boolean vegetarian, boolean glutenFree){
-    super(name, type, subtype, price);
+  public Drink(String name, String type, String subtype, Float price, boolean bogof, boolean vegetarian, boolean glutenFree){
+    super(name, type, subtype, price, bogof);
     this.vegetarian = vegetarian;
     this.glutenFree = glutenFree;
   }

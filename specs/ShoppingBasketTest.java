@@ -15,17 +15,17 @@ public class ShoppingBasketTest{
 
   @Before public void before(){
     basket = new ShoppingBasket(true);
-    cheese = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, true, false, 28);
-    beefJoint = new FrozenFood("Slow Cooked Beef Joint", "Meat", "Beef", 5.75f, false, true, -18, 84);
-    coffee = new Coffee("Taylors Lazy Sunday Coffee Beans", "Coffee", "Beans", 4.15f, true, true, "Arabica");
-    wine = new Wine("Vino Lascito Sangiovese", "Wine", "Red", 6.75f, false, false, 2015, "Italy", 12.0f);
-    lightBulb = new LightBulb("LED Spotlights - 3 pack", "Lightbulb", "LED", 3.95f, 3, 50);
-    fabricConditioner = new FabricConditioner("Comfort Pure Fabric Conditioner", "Laundry", "Fabric Conditioner", 3.45f, 42, 1.5f);
+    cheese = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, false, true, false, 28);
+    beefJoint = new FrozenFood("Slow Cooked Beef Joint", "Meat", "Beef", 5.75f, false, false, true, -18, 84);
+    coffee = new Coffee("Taylors Lazy Sunday Coffee Beans", "Coffee", "Beans", 4.15f, false, true, true, "Arabica");
+    wine = new Wine("Vino Lascito Sangiovese", "Wine", "Red", 6.75f, false, false, false, 2015, "Italy", 12.0f);
+    lightBulb = new LightBulb("LED Spotlights - 3 pack", "Lightbulb", "LED", 3.95f, false, 3, 50);
+    fabricConditioner = new FabricConditioner("Comfort Pure Fabric Conditioner", "Laundry", "Fabric Conditioner", 3.45f, false, 42, 1.5f);
   }
 
   // Initialised
 
-  @Test public void stockStartsEmpty(){
+  @Test public void basketStartsEmpty(){
     assertEquals(0, basket.getNumItems());
   }
 

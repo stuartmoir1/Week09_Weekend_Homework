@@ -8,9 +8,9 @@ public class LightBulb extends Item implements Sellable{
   private int inputPowerWatts;
 
   // Constructor
-  public LightBulb(String name, String type, String subtype, Float price,
-      int numInPack, int inputPowerWatts){
-    super(name, type, subtype, price);
+  public LightBulb(String name, String type, String subtype, Float price, 
+      boolean bogof, int numInPack, int inputPowerWatts){
+    super(name, type, subtype, price, bogof);
     this.numInPack = numInPack;
     this.inputPowerWatts = inputPowerWatts;
   }

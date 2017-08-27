@@ -9,8 +9,8 @@ public class FabricConditioner extends Item implements Sellable{
 
   // Constructor
   public FabricConditioner(String name, String type, String subtype, Float 
-      price, int numOfUses, Float sizeLitres){
-    super(name, type, subtype, price);
+      price, boolean bogof, int numOfUses, Float sizeLitres){
+    super(name, type, subtype, price, bogof);
     this.numOfUses = numOfUses;
     this.sizeLitres = sizeLitres;
   }

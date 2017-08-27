@@ -8,7 +8,7 @@ public class CoffeeTest{
 
   @Before
   public void before(){
-    coffee = new Coffee("Taylors Lazy Sunday Coffee Beans", "Coffee", "Beans", 4.15f, true, true, "Arabica");
+    coffee = new Coffee("Taylors Lazy Sunday Coffee Beans", "Coffee", "Beans", 4.15f, false, true, true, "Arabica");
   }
 
   @Test

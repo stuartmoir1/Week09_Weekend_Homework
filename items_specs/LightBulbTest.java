@@ -8,7 +8,7 @@ public class LightBulbTest{
 
   @Before
   public void before(){
-    lightBulb = new LightBulb("LED Spotlights - 3 pack", "Lightbulb", "LED", 3.95f, 3, 50);
+    lightBulb = new LightBulb("LED Spotlights - 3 pack", "Lightbulb", "LED", 3.95f, false, 3, 50);
   }
 
   @Test

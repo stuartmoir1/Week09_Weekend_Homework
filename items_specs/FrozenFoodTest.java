@@ -8,7 +8,7 @@ public class FrozenFoodTest{
 
   @Before
   public void before(){
-    frozenFood = new FrozenFood("Slow Cooked Beef Joint", "Meat", "Beef", 5.75f, false, true, -18, 84);
+    frozenFood = new FrozenFood("Slow Cooked Beef Joint", "Meat", "Beef", 5.75f, false, false, true, -18, 84);
   }
 
   @Test

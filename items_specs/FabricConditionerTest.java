@@ -8,7 +8,7 @@ public class FabricConditionerTest{
 
   @Before
   public void before(){
-    fabricConditioner = new FabricConditioner("Comfort Pure Fabric Conditioner", "Laundry", "Fabric Conditioner", 3.45f, 42, 1.5f);
+    fabricConditioner = new FabricConditioner("Comfort Pure Fabric Conditioner", "Laundry", "Fabric Conditioner", 3.45f, false, 42, 1.5f);
   }
 
   @Test

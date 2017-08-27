@@ -9,10 +9,10 @@ public class Wine extends Drink implements Sellable{
   private Float alcoholBV;
 
   // Constructor
-  public Wine(String name, String type, String subtype, Float price,
-      boolean vegetarian, boolean glutenFree, int vintage, String country, 
-      Float alcoholBV){
-    super(name, type, subtype, price, vegetarian, glutenFree);
+  public Wine(String name, String type, String subtype, Float price, boolean 
+      bogof, boolean vegetarian, boolean glutenFree, int vintage, String
+      country, Float alcoholBV){
+    super(name, type, subtype, price, bogof, vegetarian, glutenFree);
     this.vintage = vintage;
     this.country = country;
     this.alcoholBV = alcoholBV;

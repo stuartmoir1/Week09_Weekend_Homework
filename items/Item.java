@@ -7,13 +7,16 @@ public abstract class Item{
   private String type;
   private String subtype;
   private Float price;
+  private boolean bogof;
 
   // Constructor
-  public Item(String name, String type, String subtype, Float price){
+  public Item(String name, String type, String subtype, Float price, boolean
+      bogof){
     this.name = name;
     this.type = type;
     this.subtype = subtype;
     this.price = price;
+    this.bogof = bogof;
   }
 
   // Methods
@@ -32,5 +35,9 @@ public abstract class Item{
 
   public Float getPrice(){
     return this.price;
+  }
+
+  public boolean getBogof(){
+    return this.bogof;
   }
 }

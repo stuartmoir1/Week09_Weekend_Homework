@@ -8,10 +8,10 @@ public class FrozenFood extends Food implements Sellable{
   private int storageDays;
 
   // Constructor
-  public FrozenFood(String name, String type, String subtype, Float price,
-      boolean vegetarian, boolean glutenFree, int storageTemp,
+  public FrozenFood(String name, String type, String subtype, Float price, 
+      boolean bogof, boolean vegetarian, boolean glutenFree, int storageTemp,
       int storageDays){
-    super(name, type, subtype, price, vegetarian, glutenFree);
+    super(name, type, subtype, price, bogof, vegetarian, glutenFree);
     this.storageTemp = storageTemp;
     this.storageDays = storageDays;
   }

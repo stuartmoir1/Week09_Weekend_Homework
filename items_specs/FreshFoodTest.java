@@ -8,7 +8,7 @@ public class FreshFoodTest{
 
   @Before
   public void before(){
-    freshFood = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, true, false, 28);
+    freshFood = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, false, true, false, 28);
   }
 
   @Test

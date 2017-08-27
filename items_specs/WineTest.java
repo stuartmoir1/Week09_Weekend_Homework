@@ -8,7 +8,7 @@ public class WineTest{
 
   @Before
   public void before(){
-    wine = new Wine("Vino Lascito Sangiovese", "Wine", "Red", 6.75f, false, false, 2015, "Italy", 12.0f);
+    wine = new Wine("Vino Lascito Sangiovese", "Wine", "Red", 6.75f, false, false, false, 2015, "Italy", 12.0f);
   }
 
   @Test
