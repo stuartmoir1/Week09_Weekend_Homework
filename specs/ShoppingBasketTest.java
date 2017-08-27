@@ -25,29 +25,34 @@ public class ShoppingBasketTest{
 
   // Initialised
 
-  @Test public void basketStartsEmpty(){
+  @Test
+  public void testBasketStartsEmpty(){
     assertEquals(0, basket.getNumItems());
   }
 
   // Food
 
-  @Test public void addCheeseToBasket(){
+  @Test
+  public void testCheeseToBasket(){
     basket.add(cheese);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeCheeseFromBasket(){
+  @Test
+  public void testRemoveCheeseFromBasket(){
     basket.add(cheese);
     basket.remove(cheese);
     assertEquals(0, basket.getNumItems());
   }
 
-  @Test public void addBeefJointToBasket(){
+  @Test
+  public void testAddBeefJointToBasket(){
     basket.add(beefJoint);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeBeefJointFromBasket(){
+  @Test
+  public void testRemoveBeefJointFromBasket(){
     basket.add(beefJoint);
     basket.remove(beefJoint);
     assertEquals(0, basket.getNumItems());
@@ -55,23 +60,27 @@ public class ShoppingBasketTest{
 
   // Drink
 
-  @Test public void addCoffeeToBasket(){
+  @Test
+  public void testAddCoffeeToBasket(){
     basket.add(coffee);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeCoffeeFromBasket(){
+  @Test
+  public void testRemoveCoffeeFromBasket(){
     basket.add(coffee);
     basket.remove(coffee);
     assertEquals(0, basket.getNumItems());
   }
 
-  @Test public void addWineToBasket(){
+  @Test
+  public void testAddWineToBasket(){
     basket.add(wine);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeWineFromBasket(){
+  @Test
+  public void testRemoveWineFromBasket(){
     basket.add(wine);
     basket.remove(wine);
     assertEquals(0, basket.getNumItems());
@@ -79,23 +88,27 @@ public class ShoppingBasketTest{
 
   // Other
 
-  @Test public void addLightBulbToBasket(){
+  @Test
+  public void testAddLightBulbToBasket(){
     basket.add(lightBulb);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeLightBulbFromBasket(){
+  @Test
+  public void testRemoveLightBulbFromBasket(){
     basket.add(lightBulb);
     basket.remove(lightBulb);
     assertEquals(0, basket.getNumItems());
   }
 
-  @Test public void addFabricConditionerToBasket(){
+  @Test
+  public void testAddFabricConditionerToBasket(){
     basket.add(fabricConditioner);
     assertEquals(1, basket.getNumItems());
   }
 
-  @Test public void removeFabricConditionerFromBasket(){
+  @Test
+  public void testRemoveFabricConditionerFromBasket(){
     basket.add(fabricConditioner);
     basket.remove(fabricConditioner);
     assertEquals(0, basket.getNumItems());
@@ -103,7 +116,8 @@ public class ShoppingBasketTest{
 
   // Add all items to/ clear all items from basket.
 
-  @Test public void addAllItemsToBasket(){
+  @Test
+  public void testAddAllItemsToBasket(){
     basket.add(cheese);
     basket.add(beefJoint);
     basket.add(coffee);
@@ -113,7 +127,8 @@ public class ShoppingBasketTest{
     assertEquals(6, basket.getNumItems());
   }
 
-  @Test public void addClearAllItemsFromBasket(){
+  @Test
+  public void testAddClearAllItemsFromBasket(){
     basket.add(cheese);
     basket.add(beefJoint);
     basket.add(coffee);
@@ -123,4 +138,40 @@ public class ShoppingBasketTest{
     basket.clear();
     assertEquals(0, basket.getNumItems());
   }
+
+  // Price
+
+  @Test
+  public void testBasketGetTotalPrice2Items(){
+    basket.add(cheese);
+    basket.add(beefJoint);
+    assertEquals(8.75, basket.getTotalPrice(), 0.02);
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
