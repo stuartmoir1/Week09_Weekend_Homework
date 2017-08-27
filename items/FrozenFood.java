@@ -1,7 +1,6 @@
 package items;
 import behaviours.*;
 
-// public class FreshFood extends Food implements Sellable, Edible{
 public class FrozenFood extends Food implements Sellable{
 
   // Properties
