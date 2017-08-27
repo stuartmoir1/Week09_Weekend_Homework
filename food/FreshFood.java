@@ -8,8 +8,9 @@ public class FreshFood extends Food {
   private int daysUseAfterOpening;
 
   // Constructor
-  public FreshFood(String name, String type, String subtype, Float price, int quantity, int daysUseAfterOpening){
-    super(name, type, subtype, price, quantity);
+  public FreshFood(String name, String type, String subtype, Float price,
+      boolean vegetarian, boolean glutenFree, int daysUseAfterOpening){
+    super(name, type, subtype, price, vegetarian, glutenFree);
     this.daysUseAfterOpening = daysUseAfterOpening;
   }
 

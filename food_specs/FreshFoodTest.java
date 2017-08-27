@@ -8,7 +8,7 @@ public class FreshFoodTest{
 
   @Before
   public void before(){
-    freshFood = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, 1, 3);
+    freshFood = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, true, false, 28);
   }
 
   @Test
@@ -32,12 +32,17 @@ public class FreshFoodTest{
   }
 
   @Test
-  public void testGetFreshFoodQuantity(){
-    assertEquals(1, freshFood.getQuantity());
+  public void testGetFreshFoodVegetarian(){
+    assertEquals(true, freshFood.getVegetarian());
+  }
+
+  @Test
+  public void testGetFreshFoodGlutenFree(){
+    assertEquals(false, freshFood.getGlutenFree());
   }
 
   @Test
   public void testGetFreshFoodDaysUseAfterOpening(){
-    assertEquals(3, freshFood.getDaysUseAfterOpening());
+    assertEquals(28, freshFood.getDaysUseAfterOpening());
   }
 }
