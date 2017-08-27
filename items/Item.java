@@ -1,4 +1,4 @@
-package food;
+package items;
 
 public abstract class Item{
 

@@ -1,6 +1,6 @@
 import static org.junit.Assert.*;
 import org.junit.*;
-import food.*;
+import items.*;
 
 public class FreshFoodTest{
 
