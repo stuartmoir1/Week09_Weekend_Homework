@@ -32,6 +32,17 @@ public class LightBulbTest{
   }
 
   @Test
+  public void testGetLightBulbBogof(){
+    assertEquals(false, lightBulb.getBogof());
+  }
+
+  @Test
+  public void testSetLightBulbBogof(){
+    lightBulb.setBogof(true);
+    assertEquals(true, lightBulb.getBogof());
+  }
+
+  @Test
   public void testGetLightBulbNumInPack(){
     assertEquals(3, lightBulb.getNumInPack());
   }

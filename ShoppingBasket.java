@@ -8,12 +8,14 @@ public class ShoppingBasket{
   private ArrayList<Sellable> basket;
   private boolean discountApplied;
   private Float discountRate;
+  private Float discountThreshold;
 
   // Constructor
   public ShoppingBasket(boolean discountApplied){
     this.basket = new ArrayList<Sellable>();
     this.discountApplied = discountApplied;
     this.discountRate = 0.02f;
+    this.discountThreshold = 20.00f;
   }
 
   // Methods
@@ -42,24 +44,31 @@ public class ShoppingBasket{
   //   return total;
   // }
 
-  // public Float getTotalPrice(){
+  public Float getTotalPrice(){
     
     Float total = new Float(0.00);
-    HashMap<String, int> items = new HashMap<String, int>();
+    HashMap<String, Integer> items = new HashMap<String, Integer>();
     
     for (Sellable item : basket){
-      // // Count instances of items in the basket.
-      // items.containsKey(item) ? items.put(item.getName, items.get(item) + 1) : items.put(item.getName, 1);
-      // if (item.bogof) {
-      //   // Add item to basket where not bogof and 'one free'.
-      //   total += item.getPrice(); if (items.get(item) % 2 = 1) ;
-      // } else {
-      //   total += item.getPrice();
-      // }
+      // Count instances of items in the basket.
+      if (items.containsKey(item) == true){
+        items.put(item.getName(), items.get(item) + 1);
+      } else {
+        items.put(item.getName(), 1);
+      }
+      if (item.getBogof() == true) {
+        // Add item to basket where not bogof and 'one free'.
+        int mod20fItems = items.get(item) % 2;
+        total += item.getPrice(); if (mod20fItems == 1);
+      } else {
+        total += item.getPrice();
+      }
     }    
 
-    // ((total > 20) && discountApplied) ? return total : return total;
-    return null;
+    if ((total > discountThreshold) && discountApplied == true){
+      return total * discountRate;
+    } else {
+      return total;
     }
   }
 }

@@ -40,4 +40,8 @@ public abstract class Item{
   public boolean getBogof(){
     return this.bogof;
   }
+
+  public void setBogof(boolean state){
+    this.bogof = state;
+  }
 }

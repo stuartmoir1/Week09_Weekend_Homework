@@ -32,6 +32,17 @@ public class FreshFoodTest{
   }
 
   @Test
+  public void testGetFreshFoodBogof(){
+    assertEquals(false, freshFood.getBogof());
+  }
+
+  @Test
+  public void testSetFreshFoodBogof(){
+    freshFood.setBogof(true);
+    assertEquals(true, freshFood.getBogof());
+  }
+
+  @Test
   public void testGetFreshFoodVegetarian(){
     assertEquals(true, freshFood.getVegetarian());
   }

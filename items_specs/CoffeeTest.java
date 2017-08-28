@@ -32,6 +32,17 @@ public class CoffeeTest{
   }
 
   @Test
+  public void testGetCoffeeBogof(){
+    assertEquals(false, coffee.getBogof());
+  }
+
+  @Test
+  public void testSetCoffeeBogof(){
+    coffee.setBogof(true);
+    assertEquals(true, coffee.getBogof());
+  }
+
+  @Test
   public void testGetCoffeeVegetarian(){
     assertEquals(true, coffee.getVegetarian());
   }

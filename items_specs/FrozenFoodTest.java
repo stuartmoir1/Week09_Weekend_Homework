@@ -32,6 +32,17 @@ public class FrozenFoodTest{
   }
 
   @Test
+  public void testGetFrozenFoodBogof(){
+    assertEquals(false, frozenFood.getBogof());
+  }
+
+  @Test
+  public void testSetFrozenFoodBogof(){
+    frozenFood.setBogof(true);
+    assertEquals(true, frozenFood.getBogof());
+  }
+
+  @Test
   public void testGetFrozenFoodVegetarian(){
     assertEquals(false, frozenFood.getVegetarian());
   }

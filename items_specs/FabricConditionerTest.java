@@ -32,6 +32,17 @@ public class FabricConditionerTest{
   }
 
   @Test
+  public void testGetFabricConditionerBogof(){
+    assertEquals(false, fabricConditioner.getBogof());
+  }
+
+  @Test
+  public void testSetFabricConditionerBogof(){
+    fabricConditioner.setBogof(true);
+    assertEquals(true, fabricConditioner.getBogof());
+  }
+
+  @Test
   public void testGetFabricConditionerNumOfUses(){
     assertEquals(42, fabricConditioner.getNumOfUses());
   }

@@ -32,6 +32,17 @@ public class WineTest{
   }
 
   @Test
+  public void testGetWineBogof(){
+    assertEquals(false, wine.getBogof());
+  }
+
+  @Test
+  public void testSetWineBogof(){
+    wine.setBogof(true);
+    assertEquals(true, wine.getBogof());
+  }
+
+  @Test
   public void testGetWineVegetarian(){
     assertEquals(false, wine.getVegetarian());
   }

@@ -1,6 +1,8 @@
 package behaviours;
 
 public interface Sellable{
-  // Contract
+  // Contracts
   public Float getPrice();
+  public String getName();
+  public boolean getBogof();
 }
