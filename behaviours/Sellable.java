@@ -5,4 +5,5 @@ public interface Sellable{
   public Float getPrice();
   public String getName();
   public boolean getBogof();
+  //public boolean setBogof();
 }

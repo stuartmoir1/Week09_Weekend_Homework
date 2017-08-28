@@ -160,14 +160,15 @@ public class ShoppingBasketTest{
     assertEquals(8.75, basket.getTotalPrice(), 0.02);
   }
 
-  // @Test
-  // public void testBasketGetTotalPrice3ItemsCheeseBogofTrue(){
-  //   cheese.setBogof(true);
-  //   basket.add(cheese);
-  //   basket.add(cheese); // Free
-  //   basket.add(beefJoint);
-  //   assertEquals(8.75, basket.getTotalPrice(), 0.02);
-  // }
+  @Test
+  public void testBasketGetTotalPrice3ItemsCheeseBogofTrue(){
+    //System.out.println(cheese.getBogof());
+    cheese.setBogof(true);
+    basket.add(cheese);
+    basket.add(cheese); // Free
+    basket.add(beefJoint);
+    assertEquals(8.75, basket.getTotalPrice(), 0.02);
+  }
 
   // @Test
   // public void testBasketGetTotalPrice4ItemsCheeseBogofTrue(){
