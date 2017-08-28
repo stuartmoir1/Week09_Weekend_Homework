@@ -11,9 +11,9 @@ public class ShoppingBasket{
   private Float discountThreshold;
 
   // Constructor
-  public ShoppingBasket(boolean discountApplied){
+  public ShoppingBasket(){
     this.basket = new ArrayList<Sellable>();
-    this.discountApplied = discountApplied;
+    this.discountApplied = false;
     this.discountRate = 0.02f;
     this.discountThreshold = 20.00f;
   }
@@ -34,6 +34,14 @@ public class ShoppingBasket{
 
   public void clear(){
     basket.clear();
+  }
+
+  public boolean getDiscountApplied(){
+    return this.discountApplied;
+  }
+
+  public void setDiscountApplied(boolean state){
+    this.discountApplied = state;
   }
 
   // public Float getTotalPrice(){

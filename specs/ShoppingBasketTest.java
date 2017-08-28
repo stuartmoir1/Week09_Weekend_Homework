@@ -14,7 +14,7 @@ public class ShoppingBasketTest{
   Sellable fabricConditioner;
 
   @Before public void before(){
-    basket = new ShoppingBasket(true);
+    basket = new ShoppingBasket();
     cheese = new FreshFood("Cathedral City Mature", "Cheese", "Cheddar", 3.00f, false, true, false, 28);
     beefJoint = new FrozenFood("Slow Cooked Beef Joint", "Meat", "Beef", 5.75f, false, false, true, -18, 84);
     coffee = new Coffee("Taylors Lazy Sunday Coffee Beans", "Coffee", "Beans", 4.15f, false, true, true, "Arabica");
@@ -24,10 +24,22 @@ public class ShoppingBasketTest{
   }
 
   // Initialised
-
   @Test
   public void testBasketStartsEmpty(){
     assertEquals(0, basket.getNumItems());
+  }
+
+  // Discount
+
+  @Test
+  public void testBasketDiscountAppliedFalse(){
+    assertEquals(false, basket.getDiscountApplied());
+  }
+
+  @Test
+  public void testBasketDiscountAppliedTrue(){
+    basket.setDiscountApplied(true);
+    assertEquals(true, basket.getDiscountApplied());
   }
 
   // Food
@@ -147,6 +159,60 @@ public class ShoppingBasketTest{
     basket.add(beefJoint);
     assertEquals(8.75, basket.getTotalPrice(), 0.02);
   }
+
+  // @Test
+  // public void testBasketGetTotalPrice3ItemsCheeseBogofTrue(){
+  //   cheese.setBogof(true);
+  //   basket.add(cheese);
+  //   basket.add(cheese); // Free
+  //   basket.add(beefJoint);
+  //   assertEquals(8.75, basket.getTotalPrice(), 0.02);
+  // }
+
+  // @Test
+  // public void testBasketGetTotalPrice4ItemsCheeseBogofTrue(){
+  //   cheese.setBogof(true);
+  //   basket.add(cheese);
+  //   basket.add(cheese); // Free
+  //   basket.add(cheese);
+  //   basket.add(beefJoint);
+  //   assertEquals(11.75, basket.getTotalPrice(), 0.02);
+  // }
+
+  // @Test
+  // public void testBasketGetTotalPrice5ItemsCheeseBogofTrue(){
+  //   cheese.setBogof(true);
+  //   basket.add(cheese);
+  //   basket.add(cheese); // Free
+  //   basket.add(cheese);
+  //   basket.add(beefJoint);
+  //   basket.add(coffee);
+  //   assertEquals(15.90, basket.getTotalPrice(), 0.02);
+  // }
+
+  // @Test
+  // public void testBasketGetTotalPrice5ItemsCheeseBogofTrue(){
+  //   cheese.setBogof(true);
+  //   basket.add(cheese);
+  //   basket.add(cheese); // Free
+  //   basket.add(cheese);
+  //   basket.add(beefJoint);
+  //   basket.add(coffee);
+  //   basket.add(wine);
+  //   assertEquals(22.65, basket.getTotalPrice(), 0.02);
+  // }
+
+  // @Test
+  // public void testBasketGetTotalPrice5ItemsCheeseBogofTrueDiscountApplied(){
+  //   cheese.setBogof(true);
+  //   basket.add(cheese);
+  //   basket.add(cheese); // Free
+  //   basket.add(cheese);
+  //   basket.add(beefJoint);
+  //   basket.add(coffee);
+  //   basket.add(wine);
+  //   basket.setDiscountApplied(true);
+  //   assertEquals(18.12, basket.getTotalPrice(), 0.02)
 }
 
 
